@@ -7,6 +7,6 @@ def Deck():
     deck = list()
     for item in Types:
         for index, each in enumerate(Names):
-            deck.append(card(each,Value[index]),item)
-    print(deck)
-Deck()
+            single = card(each,Value[index],item)
+            deck.append(single)
+    return(deck)
