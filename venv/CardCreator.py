@@ -4,5 +4,5 @@ class card:
         self.value = value
         self.type = type
 
-    def read(self):
-        print("You drew the " +str(self.name) +" of " +str(self.type))
+    def read(self,user):
+        print( str(user)+" drew the " +str(self.name) +" of " +str(self.type))

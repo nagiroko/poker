@@ -19,7 +19,15 @@ def draw():
 
     return single
 def game():
-    print("game")
+    playerbust = False
+    dealerbust = False
+    drawedcard = draw()
+    drawedcard.read("player")
+    playercount = drawedcard.value
+    drawedcard = draw()
+    drawedcard.read("player")
+    playercount += drawedcard.value
+    print(playercount)
 def start():
     decide = input("enter y to play blackjack. caps dont matter")
     decide = decide.capitalize()
