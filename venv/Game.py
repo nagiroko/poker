@@ -11,22 +11,18 @@ def setup():
     dealercount = 0
     dek = Deck()
 setup()
-def draw():
+def draw(user):
     count = len(dek) - 1
     pos = random.randint(0,count)
     single = dek[pos]
     dek.pop(pos)
-
-    return single
+    single.read(user)
+    return single.value
 def game():
     playerbust = False
     dealerbust = False
-    drawedcard = draw()
-    drawedcard.read("player")
-    playercount = drawedcard.value
-    drawedcard = draw()
-    drawedcard.read("player")
-    playercount += drawedcard.value
+    playercount = draw("player")
+    playercount += draw("player")
     print(playercount)
 def start():
     decide = input("enter y to play blackjack. caps dont matter")
