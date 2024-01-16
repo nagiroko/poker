@@ -21,10 +21,12 @@ def draw(user):
 def game():
     playerbust = False
     dealerbust = False
-    playercount = draw("player")
-    playercount += draw("player")
+    playercount = draw(name)
+    playercount += draw(name)
     print(playercount)
 def start():
+    global name
+    name = input("type name then enter ")
     decide = input("enter y to play blackjack. caps dont matter")
     decide = decide.capitalize()
     decide = decide.replace(" ",'')
